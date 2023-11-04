@@ -1,0 +1,268 @@
+:root {
+    --moonstone: #53A2BE;
+    --blue: #1D84B5;
+    --lapis: #176087;
+    --qxford-blue: #0A2239;
+    --gunmetal: #132E32;
+  }
+
+
+body, body *{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif !important;
+    /* border-style: solid;
+    border-color: black;
+    border-width: 2px; */
+}
+
+body{
+    background-color: var(--moonstone);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.063rem solid var(--qxford-blue);
+    box-shadow: 0.03rem 0.03rem #132E32;
+    height: 8rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+/*  LEFT SECTION OF NAVBAR   */
+
+.logoImage{
+    height: 19.5rem;
+}
+.logoDiv{
+    height: 14.5rem;
+    margin-left: 1rem;
+    margin-top: -5.6rem;
+    
+}
+
+/*  RIGHT SECTION OF NAVBAR  */
+
+.createDiv{
+    width: 12.5rem;
+    height: 9.7rem;
+    margin-top: -1.6rem; 
+    text-align:center;
+    position: relative;
+    margin-right: 2.3rem;
+}
+
+.createButton{
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 2.5rem;
+    font-size: 1.3rem;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    background-color: var(--blue);
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: 0.1rem 0.1rem 0.5rem#132E32;
+
+}
+
+/*  CREATE ITEM POPUP  */
+
+
+.content{
+    height: 20rem;
+    width: 28rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--qxford-blue);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    color:white;
+
+}
+
+.popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    
+}
+
+.open-popup{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    
+
+}
+
+.close-button-form-div{
+    float:right;
+    margin-top: 0rem;
+    margin-right: -1.5rem;
+}
+.close-button-form{
+    border-radius: 0.5rem;
+    border-width: 0;
+    background-color: var(--qxford-blue);
+    font-size: 1.3rem;
+    color: white;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.fields{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: center;
+    width: 20rem;
+}
+
+.text-book{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.text-book-div{
+    margin-top: 0.3rem;
+}
+
+.title-input,
+.author-input{
+    width: 19rem;
+    height: 2rem;
+}
+.description-input{
+    width: 19rem;
+    height: 3rem;
+    resize:none;
+}
+
+
+.pag-input{
+    width: 3.5rem;
+    height: 1rem;
+}
+
+.title-input,
+.description-input,
+.author-input,
+.pag-input{
+    border: 0.1rem solid #5C5552;
+    border-radius: 0.5rem;
+    padding-left: 0.3rem;                                               
+}
+
+.submit{
+    margin-top: 1rem;
+}
+.submit-input{
+    font-size: 1rem;
+    padding: 0.3rem 0.9rem 0.3rem 0.9rem;
+    background-color: var(--blue);
+    border-radius: 5px;
+    border-width: 0;
+}
+
+.description-span {
+    position: absolute;
+    left: -9999px;
+    display: inline-block;
+    min-width: 6em;
+}
+
+
+/* ITEM DESCRIPTION */
+
+.item-list{
+    padding-left: 0;
+    width: 30rem;
+    height: 10rem;
+    
+}
+
+.item-list::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    height: 33vh;
+    width: 56.5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--lapis);
+    box-shadow: 0.1rem 0.1rem 0.5rem#132E32;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+ .container {
+    height: 30vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: center;
+  } 
+
+.text-elements,
+.item-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.item-name{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.3rem;
+
+}
+
+.item-description{
+    width: 30rem;
+    word-wrap: break-word;
+    margin-top:1rem;
+}
+
+
+.item-info{
+    margin-bottom: 1rem;
+}
+
+.more-button{
+    width: 4rem;
+    background-color: var(--lapis);
+    border-width: 0;
+    font-size: 2rem;
+    float: right;
+}
+
+.more-button-div{
+    width: 34rem;
+}
