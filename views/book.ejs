@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="popup">
+        <div class="content">
+            <div class="close-button-form-div">
+                <button class="close-button-form">&#10005;</button> 
+            </div>
+            <form class="input-form" action="/edit/" method="post">
+                <div class="text-book-div">
+                    <p class="text-book">Edit</p>
+                </div>
+                <section class="fields">
+                    <input required type="text" name="itemname" id="name" class="title-input" placeholder="Nume Carte" value="<%= data.itemname %>">
+                    <input required type="text" name="itemauthor" id="author" class="author-input" placeholder="Nume Autor" value="<%= data.itemauthor %>">
+                    <textarea required type="text" name="itemdescription" id="description" class="description-input"
+                        placeholder="Descriere"><%= data.itemdescription %></textarea>
+                    <span class="description-span"></span>
+                    <div class="inputflex-div">
+                        <input required type="number" name="pag" id="pag" class="pag-input" placeholder="Pagini" value="<%= data.pag %>">
+                        <input name="id" style="display: none;" value="<%= data.id %>">
+                        <input name="date" style="display: none;" value="<%= data.date %>">
+                        <select name="category" class="category-input" value="<%=data.category %>">
+                            <option value="actiune">Actiune</option>
+                            <option value="romanta">Romanta</option>
+                            <option value="horror">Horror</option>
+                          </select>
+                    </div>                                                              
+                </section>
+
+                <section class="submit">
+                    <input type="submit" class="submit-input">
+                </section>
+            </form>
+        </div>
+    </div>
+
+    <nav>
+        <a href="/" class="logoDiv">
+            <img src="/images/logo.png" class="logoImage">
+        </a>
+    </nav>
+    <main>
+        <div class="container">
+            <ul class="item-list">
+                <li class="item">
+                    <div class="text-elements">
+                        <label for="item" class="item-info">
+                            <span class="item-name">
+                                <%= data.itemname %>
+                            </span>
+                            <span class="item-author">
+                                <%= data.itemauthor %>
+                            </span>
+                            <span class="item-description">
+                                <%= data.itemdescription %>
+                            </span>
+
+                        </label>
+                        <span class="item-pag-text">
+                            <%= data.pag + " pagini" %>
+                        </span>
+
+                        <span class="item-categ-text">
+                            <%= "Categorie: " + data.category %>
+                        </span>
+                        
+                        <span class="item-date-text">
+                            <%= data.date.toUTCString().split(' ').slice(1).slice(0, -2).join(' ') %>
+                        </span>
+
+                        <div style="display: none;" class="post-id">
+                            <%= data.id %>
+                        </div>
+                        <div class="post-options">
+                            <div class="post-delete-div">
+                                <button onclick="sendDeleteRequest('<%= data._id %>')" class="post-delete">X Delete</button>
+                            </div>
+                            <div class="post-edit-div">
+                                <button class="post-edit">Edit <img src="/images/edit-icon.png" style="height: 0.8rem;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script src="/bookapp.js" defer></script>
+</body>
+
+</html>

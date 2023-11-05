@@ -5,7 +5,7 @@ const closeForm = document.querySelector(".close-button-form")
 const popup = document.querySelector(".popup");
 const itemList = document.querySelector(".item-list");
 const inputForm = document.querySelector(".input-form");
-const xButtons = document.querySelectorAll(".delete-button")
+const xButtons = document.querySelectorAll(".more-button")
 // INPUT 
 const nameInput = document.querySelector("#name");
 const authorInput = document.querySelector("#author");

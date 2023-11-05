@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">
+            <div class="logoDiv">
+                <img src="images/logo.png" class="logoImage">
+            </div>
+        </a>
+        <div class="categ-select-flex">
+        <div class="categ-select-div">
+            <a class="categ-select" href="/actiune">
+                Carti Actiune
+            </a>
+        </div>
+        <div class="categ-select-div">
+            <a class="categ-select" href="/romanta">
+                Carti Romanta
+            </a>
+        </div>
+        <div class="categ-select-div"> 
+            <a class="categ-select" href="/horror">
+                Carti Horror
+            </a>
+        </div>
+    </div>
+        <div class="createDiv">
+            <button class="createButton">Create&#x2b;</button>
+        </div>
+    </nav>
+    <div class="popup">
+        <div class="content">
+            <div class="close-button-form-div">
+                <button class="close-button-form">&#10005;</button>
+            </div>
+            <form class="input-form" action="/new/" method="post">
+                <div class="text-book-div">
+                    <p class="text-book">Create a book</p>
+                </div>
+                <section class="fields">
+                    <input required type="text" name="itemname" id="name" class="title-input" placeholder="Nume Carte">
+                    <input required type="text" name="itemauthor" id="author" class="author-input"
+                        placeholder="Nume Autor">
+                    <textarea required type="text" name="itemdescription" id="description" class="description-input"
+                        placeholder="Descriere"></textarea>
+                    <span class="description-span"></span>
+
+                    <div class="inputflex-div">
+                        <input required type="number" name="pag" id="pag" class="pag-input" placeholder="Pagini">
+                        <select name="category" class="category-input">
+                            <option value="actiune">Actiune</option>
+                            <option value="romanta">Romanta</option>
+                            <option value="horror">Horror</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="submit">
+                    <input type="submit" class="submit-input">
+                </section>
+            </form>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+            <ul class="item-list">
+
+                <% data.slice(0, 3).forEach(post=> { %>
+                    <li class="item">
+                        <div class="more-button-div">
+                            <a href="http://localhost:3000/carti/<%=post.id%>" class="more-button">&#8942;</a>
+                        </div>
+                        <div class="text-elements">
+                            <label for="item" class="item-info">
+                                <span class="item-name">
+                                    <%= post.itemname %>
+                                </span>
+                                <span class="item-author">
+                                    <%= post.itemauthor %>
+                                </span>
+                                <span class="item-description">
+                                    <%= post.itemdescription %>
+                                </span>
+
+                            </label>
+                            <span class="item-pag-text">
+                                <%= post.pag + " pagini" %>
+                            </span>
+
+                            <span class="item-categ-text">
+                                <%= "Categorie: " + post.category %>
+                            </span>
+                            <div style="display: none;" class="post-id">
+                                <%= post.id %>
+                            </div>
+
+                        </div>
+                    </li>
+                    <% }); %>
+            </ul>
+    </main>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+
+</html>

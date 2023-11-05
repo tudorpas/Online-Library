@@ -69,6 +69,35 @@ main{
 
 }
 
+
+
+.categ-select{
+    background-color: var(--blue);
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: 0.1rem 0.1rem 0.5rem#132E32;
+    width: 10rem;
+    height: 5rem;
+}
+.categ-select-div{
+    width: auto;
+    height: auto;
+}
+
+
+.categ-select-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55rem;
+    margin-top: 3.4rem;
+}
+
+
 /*  CREATE ITEM POPUP  */
 
 
@@ -167,10 +196,12 @@ main{
 .title-input,
 .description-input,
 .author-input,
-.pag-input{
+.pag-input,
+.category-input{
     border: 0.1rem solid #5C5552;
     border-radius: 0.5rem;
-    padding-left: 0.3rem;                                               
+    padding-left: 0.3rem; 
+    padding-right: 0.1rem;                                              
 }
 
 .submit{
@@ -208,8 +239,8 @@ main{
 .item {
     display: flex;
     flex-direction: column;
-    height: 33vh;
-    width: 56.5vh;
+    height: 25vh;
+    width: 50vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -225,7 +256,7 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: -4rem;
     align-items: center;
   } 
 
@@ -240,29 +271,62 @@ main{
 .item-name{
     text-align: center;
     font-weight: bold;
-    margin-bottom: 1.3rem;
-
+    margin-bottom: 0.5rem;
 }
 
 .item-description{
     width: 30rem;
     word-wrap: break-word;
-    margin-top:1rem;
+    margin-top:0.2rem;
 }
 
+.item-categ-text{
+    margin-top: 0.5rem;
+    margin-bottom:0.2rem ;
+}
+
+.item-date-text{
+    margin-bottom: 1rem;
+}
 
 .item-info{
     margin-bottom: 1rem;
 }
 
 .more-button{
-    width: 4rem;
+    width: 2rem;
     background-color: var(--lapis);
     border-width: 0;
     font-size: 2rem;
     float: right;
+    color: black;
+    text-decoration: none;
 }
 
 .more-button-div{
-    width: 34rem;
+    margin-left: 28rem;
+    margin-top: 1rem;
+}
+
+.post-delete,
+.post-edit{
+    background-color:var(--blue) ;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border-width: 0;
+    box-shadow: 0.1rem 0.1rem 0.5rem#132E32;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+.post-delete-div,
+.post-edit-div{
+    display: inline-block;
+}
+
+
+.post-option{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
