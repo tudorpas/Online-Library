@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
+require('dotenv').config();
 // IMPORT PATHS
 const staticPath = __dirname + '/public'; 
 const routesPath = __dirname + '/routes';
@@ -17,7 +18,7 @@ const PORT = 3000;
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb+srv://tudorpascariu:KkM8Uv81VXftZZIH@generatiatechproject.rnhpqgn.mongodb.net/?authMechanism=DEFAULT');}
+  await mongoose.connect(process.env.MONGO_URI);}
 
 // MAKING /PUBLIC FOLDER STATIC
 app.use(express.static(staticPath));
