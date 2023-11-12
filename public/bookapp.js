@@ -6,10 +6,10 @@ const closeForm = document.querySelector(".close-button-form")
 const popup = document.querySelector(".popup");
 
 function sendDeleteRequest(id) {
-  fetch("http://localhost:3000/" + id, {
+  fetch("/" + id, {
     method: "DELETE"
   });
-  window.location.href = "http://localhost:3000";
+  window.location.href = "/";
 }
 
 
