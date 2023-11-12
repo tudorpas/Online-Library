@@ -30,7 +30,7 @@ router.post('/new', middle, async (req, res) =>{
     res.redirect("/")
 
     } catch (err) {
-      res.redirect("http://localhost:3000/")
+      res.redirect("/")
     }
 });
 
@@ -40,7 +40,7 @@ router.post('/edit', middle, async ( req, res ) => {
       return res.status(400).send("Failed");
     }
     await Post.updateOne({_id: payload.id}, payload);
-    res.redirect("http://localhost:3000/");
+    res.redirect("/");
   });
 
 router.delete('/:id',async ( req, res ) => {
