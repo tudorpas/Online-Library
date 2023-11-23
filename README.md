@@ -1,6 +1,6 @@
 ## Online-Library
 Project within the "Generatia Tech" program.
-Simple Online Library project made to learn front end development and back end development.
+Simple Online Library project made to learn front end development, back end development and database usage.
 
 # Getting Started
 To get started with Online-Library:
