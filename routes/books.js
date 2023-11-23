@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 router.get('/:id', (req, res) => {
-    res.send(`Carti ${req.params.id}`)
+    res.send(`${req.params.id} books`)
 })
 
 router.param('id', (req, res, next, id) => {

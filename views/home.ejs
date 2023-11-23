@@ -20,18 +20,18 @@
         </a>
         <div class="categ-select-flex">
         <div class="categ-select-div">
-            <a class="categ-select" href="/actiune">
-                Carti Actiune
+            <a class="categ-select" href="/action">
+                Action Books
             </a>
         </div>
         <div class="categ-select-div">
-            <a class="categ-select" href="/romanta">
-                Carti Romanta
+            <a class="categ-select" href="/romance">
+                Romance Books
             </a>
         </div>
         <div class="categ-select-div"> 
             <a class="categ-select" href="/horror">
-                Carti Horror
+                Horror Books
             </a>
         </div>
     </div>
@@ -49,18 +49,18 @@
                     <p class="text-book">Create a book</p>
                 </div>
                 <section class="fields">
-                    <input required type="text" name="itemname" id="name" class="title-input" placeholder="Nume Carte">
+                    <input required type="text" name="itemname" id="name" class="title-input" placeholder="Title">
                     <input required type="text" name="itemauthor" id="author" class="author-input"
-                        placeholder="Nume Autor">
+                        placeholder="Author">
                     <textarea required type="text" name="itemdescription" id="description" class="description-input"
-                        placeholder="Descriere"></textarea>
+                        placeholder="Description"></textarea>
                     <span class="description-span"></span>
 
                     <div class="inputflex-div">
-                        <input required type="number" name="pag" id="pag" class="pag-input" placeholder="Pagini">
+                        <input required type="number" name="pag" id="pag" class="pag-input" placeholder="Pages">
                         <select name="category" class="category-input">
-                            <option value="actiune">Actiune</option>
-                            <option value="romanta">Romanta</option>
+                            <option value="action">Action</option>
+                            <option value="romance">Romance</option>
                             <option value="horror">Horror</option>
                         </select>
                     </div>
@@ -79,7 +79,7 @@
                 <% data.slice(0, 3).forEach(post=> { %>
                     <li class="item">
                         <div class="more-button-div">
-                            <a href="/carti/<%=post.id%>" class="more-button">&#8942;</a>
+                            <a href="/books/<%=post.id%>" class="more-button">&#8942;</a>
                         </div>
                         <div class="text-elements">
                             <label for="item" class="item-info">

@@ -23,18 +23,18 @@
                     <p class="text-book">Edit</p>
                 </div>
                 <section class="fields">
-                    <input required type="text" name="itemname" id="name" class="title-input" placeholder="Nume Carte" value="<%= data.itemname %>">
-                    <input required type="text" name="itemauthor" id="author" class="author-input" placeholder="Nume Autor" value="<%= data.itemauthor %>">
+                    <input required type="text" name="itemname" id="name" class="title-input" placeholder="Title" value="<%= data.itemname %>">
+                    <input required type="text" name="itemauthor" id="author" class="author-input" placeholder="Author" value="<%= data.itemauthor %>">
                     <textarea required type="text" name="itemdescription" id="description" class="description-input"
-                        placeholder="Descriere"><%= data.itemdescription %></textarea>
+                        placeholder="Description"><%= data.itemdescription %></textarea>
                     <span class="description-span"></span>
                     <div class="inputflex-div">
-                        <input required type="number" name="pag" id="pag" class="pag-input" placeholder="Pagini" value="<%= data.pag %>">
+                        <input required type="number" name="pag" id="pag" class="pag-input" placeholder="Pages" value="<%= data.pag %>">
                         <input name="id" style="display: none;" value="<%= data.id %>">
                         <input name="date" style="display: none;" value="<%= data.date %>">
                         <select name="category" class="category-input" value="<%=data.category %>">
-                            <option value="actiune">Actiune</option>
-                            <option value="romanta">Romanta</option>
+                            <option value="actiune">Action</option>
+                            <option value="romanta">Romance</option>
                             <option value="horror">Horror</option>
                           </select>
                     </div>                                                              

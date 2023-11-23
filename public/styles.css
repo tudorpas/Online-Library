@@ -1,6 +1,6 @@
 :root {
     --moonstone: #53A2BE;
-    --blue: #1D84B5;
+    --blue: #187D9B;
     --lapis: #176087;
     --qxford-blue: #0A2239;
     --gunmetal: #132E32;
@@ -16,7 +16,7 @@ body, body *{
 }
 
 body{
-    background-color: var(--moonstone);
+    background-color: #87e3fa;
 }
 
 nav{
@@ -50,10 +50,10 @@ main{
 .createDiv{
     width: 12.5rem;
     height: 9.7rem;
-    margin-top: -1.6rem; 
+    margin-top: -1rem; 
     text-align:center;
     position: relative;
-    margin-right: 2.3rem;
+    margin-right: 4rem;
 }
 
 .createButton{
@@ -61,7 +61,7 @@ main{
     bottom: 0px;
     margin-bottom: 2.5rem;
     font-size: 1.3rem;
-    padding: 0.8rem 1rem 0.8rem 1rem;
+    padding: 1.2rem 1.6rem 1.2rem 1.6rem;
     background-color: var(--blue);
     border-radius: 4px;
     border-width: 0;
@@ -82,10 +82,11 @@ main{
     box-shadow: 0.1rem 0.1rem 0.5rem#132E32;
     width: 10rem;
     height: 5rem;
+    padding: 1rem 1rem 1rem 1rem;
 }
 .categ-select-div{
     width: auto;
-    height: auto;
+    height: 3rem;
 }
 
 
@@ -237,17 +238,16 @@ main{
 }
 
 .item {
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
-    height: 25vh;
+    height: 30vh;
     width: 50vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     background-color: var(--lapis);
     box-shadow: 0.1rem 0.1rem 0.5rem#132E32;
     margin-top: 1rem;
-    align-items: center;
 }
 
  .container {

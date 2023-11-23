@@ -24,7 +24,7 @@ async function main() {
 app.use(express.static(staticPath));
 // USE ROUTERS
 app.use('/', homeRouter.router);
-app.use('/carti', idRouter);
+app.use('/books', idRouter);
 
 app.set('view engine', 'ejs');
 
