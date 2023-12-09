@@ -9,7 +9,7 @@ To get started with Online-Library:
 3. Add the following environment variables to the `.env` file:
 ```
 MONGO_URI=<your MongoDB URI>
-PORT=<your desired port>
+
 ```
 4. Run `npm install` to install dependencies
 5. Run `npm run dev` to start the server
